@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+
+body {
+    background: var(--Very-Dark-Blue);
+}
+.header {
+    background: url(./assets/images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.todo-title {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin: 0px auto 40px;
+    padding: 50px;
+}
+.create-todo {
+    border: none;
+    padding: 25px;
+    color: var(--Bright-Blue);
+    font-size: 18px;
+    background: var(--Very-Dark-Desaturated-Blue);
+    width: 30vw;
+    cursor: pointer;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+.add-todo {
+    background-color: var(--Bright-Blue);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    width: 100px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.8s;
+}
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Very-Dark-Grayish-Blue);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.add-todo:hover {
+    background: var(--Light-Grayish-Blue-hover);
+    color: var(--Bright-Blue);
+}
+.list-content {
+    background: var(--Very-Dark-Desaturated-Blue);
+    margin: 20px auto;
+    padding: 10px 10px;
+    width: 38vw;
+    border-radius: 15px;
+}
+.prompt-text {
+    color: var(--Very-Dark-Desaturated-Blue);
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+    display: none;
+    font-family: sans-serif;
+}
+
+.todo-list {
+    list-style: none;
+    color: var(--Bright-Blue);
+    font-family: sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+}
+.delete-todo {
+    background-color: var(--Bright-Blue);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 10px;
+    width: 5vw;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.error-message {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 3px;
+    font-size: 15px;
+}
+
+@media (max-width:800px){
+    .header{
+        background: url(./assets/images/bg-desktop-dark.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;     
+    }
+}
